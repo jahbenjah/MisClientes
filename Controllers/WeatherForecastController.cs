@@ -23,8 +23,23 @@ namespace MisClientes.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Descripción del proposito el método.
+        /// </summary>
+        /// <param name="parametro1">El valor del paramatro 1.</param>
+        /// <param name="parametro2">El valor del parametro 2.</param>
+        /// <returns>Descripción de la salida.</returns>
+        /// <remarks>
+        /// Petición de ejemplo:
+        ///
+        ///     Get /ruta/5/10
+        ///
+        /// </remarks>
+        /// <response code="200">Condiciones en las que se regresa.</response>
+        /// <response code="400">Condiciones en las que se regresa.</response>
+
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<WeatherForecast> Get(int parametro1,int parametro2)
         {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
